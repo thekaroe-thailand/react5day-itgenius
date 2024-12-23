@@ -38,12 +38,9 @@ export const Product = () => {
                         products.length > 0 && products
                             .filter(product =>
                                 (product.status === filter || filter === 'all')
-                                &&
-                                product.name.toLowerCase().includes(search.toLowerCase())
-                                &&
-                                (!priceFrom || product.price >= Number(priceFrom))
-                                &&
-                                (!priceTo || product.price <= Number(priceTo))
+                                && product.name.toLowerCase().includes(search.toLowerCase())
+                                && (!priceFrom || product.price >= Number(priceFrom))
+                                && (!priceTo || product.price <= Number(priceTo))
                             )
                             .map(product => (
                                 <tr key={product.id}>
