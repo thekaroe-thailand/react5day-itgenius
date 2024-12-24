@@ -8,6 +8,10 @@ import MyNumber from './MyNumber';
 import HttpApp from './HttpApp';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Product } from './Product';
+import { FileUpload } from './FileUpload';
+import { MyLocalStorage } from './MyLocalStorage';
+import { UseHeaders } from './UseHeaders';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,6 +36,18 @@ const router = createBrowserRouter([
   {
     path: '/product',
     element: <Product />,
+  },
+  {
+    path: '/fileupload',
+    element: <FileUpload />,
+  },
+  {
+    path: '/mylocalstorage',
+    element: <MyLocalStorage />,
+  },
+  {
+    path: '/useheaders',
+    element: <UseHeaders />,
   },
 ]);
 
